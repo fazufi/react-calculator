@@ -4,12 +4,20 @@ import React, {Component} from "react";
 import ResultComponent from "./kumpulankomponen/ResultComponent";
 import Komponenbagi from "./kumpulankomponen/komponenbagi";
 import "./kumpulankomponen/komponenbagi.css";
+import Komponentambah from "./kumpulankomponen/komponentambah";
+import Komponenkurang from "./kumpulankomponen/komponkurang";
+import Komponenkali from "./kumpulankomponen/komponenkali";
 
 export default class Intikalkulator extends Component {
   constructor(props){
     super(props)
     this.state = {
-      hasil: ""
+      hasil: "",
+      Tambah: false,
+      Kurang: false,
+      Kali: false,
+      Bagi: false
+
     }
   };
 
@@ -47,9 +55,21 @@ klik = tombol => {
     return(
       <div>
         <div className="fullkalkulator">
-          <h1>UJIAN KALKULATOR</h1>
+          <h1>HASIL KALKULATOR</h1>
           <ResultComponent hasil={this.state.hasil}/>
-          <Komponenbagi klik={this.klik}/>
+
+          {this.state.Tambah && <Komponentambah klik={this.klik}/>}
+          {this.state.Kurang && <Komponenkurang klik={this.klik}/>}
+          {this.state.Kali && <Komponenkali klik={this.klik}/>}
+          {this.state.Bagi && <Komponenbagi klik={this.klik}/>}
+          <h1>PILIH SALAH SATU</h1>
+          <div className="buttonpilih">
+          <button onClick={() => this.setState({Tambah: !this.state.Tambah})}>TBH/CLOS</button>
+          <button onClick={() => this.setState({Kurang: !this.state.Kurang})}>KRG/CLOSE</button>
+          <button onClick={() => this.setState({Kali: !this.state.Kali})}>KALI/CLOSE</button>
+          <button onClick={() => this.setState({Bagi: !this.state.Bagi})}>BAGI/CLOSE</button>
+          </div>
+          {/* <Komponenbagi klik={this.klik}/> */}
         </div>
       </div>
 

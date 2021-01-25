@@ -5,8 +5,7 @@ export default class Komponenbagi extends Component {
   render() {
     return (
       <div classnmame= "komponenbagi">
-      <button onClick={()=> this.props.klik}>BAGI</button><br/>
-
+      
       <button name="/" onClick={parameter => this.props.klik(parameter.target.name)}>:</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>
       <button name="1" onClick={parameter => this.props.klik(parameter.target.name)}>1</button>

@@ -1,0 +1,29 @@
+.hasil {
+  height: 60px;
+  background-color: red;
+  width: 200%;
+}
+
+.hasil p {
+  font-size: 40px;
+  margin: 5px;
+  text-align: center;
+
+}
+
+.fullkalkulator {
+  max-width: 400px;
+  margin: auto;
+}
+
+.Komponentambah {
+  display: block;
+  background-color: black;
+}
+
+button {
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+  background-color: turquoise;
+}
