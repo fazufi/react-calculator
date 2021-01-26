@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export default class Komponentambah extends Component {
+export default class Komponentambah extends Component {  
 
   render() {
     return (

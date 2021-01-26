@@ -17,10 +17,10 @@ export default class Intikalkulator extends Component {
       Kurang: false,
       Kali: false,
       Bagi: false,
-      Nontambah: true,
-      Nonkurang: true,
-      Nonkali: true,
-      Nonbagi: true
+      // Nontambah: true,
+      // Nonkurang: true,
+      // Nonkali: true,
+      // Nonbagi: true
       
 
     }
@@ -65,36 +65,18 @@ klik = tombol => {
           <h1>PILIH SALAH SATU</h1>
           <div className="buttonpilih">
           <button onClick={() => this.setState({Tambah: !this.state.Tambah})}>TBH</button>           
-          <button onClick={() => this.setState({Kurang: !this.state.Kurang})}>KRG</button>
+          <button onClick={() => this.setState({Kurang: !this.state.Kurang, Tambah: false})}>KRG</button>
           <button onClick={() => this.setState({Kali: !this.state.Kali})}>KALI</button>
           <button onClick={() => this.setState({Bagi: !this.state.Bagi})}>BAGI</button>
-          </div>
-          
-          {/* {this.state.showHasil && (
-                <Comp2
-                  biodata={this.state.biodata}
-                  closeHasil={() => this.setState({ showHasil: false })}
-                  closeAnak={() => this.setState({ showAnak: false })}
-                  />
-
-          <button onClick={() => this.props.closeHasil()}>Close</button> */}
-
-
-
-
-
-          {this.state.Tambah && <Komponentambah klik={this.klik}/>}                
-          {this.state.Kurang && (
-            <Komponenkurang
-              
-              // hasil={this.state.hasil}
-              // Kurang={() => this.sestState({Nonkukrang: false})}
-              // Nonkurang={() => this.setState({Kurang: false})}
-              klik={this.klik} 
-            />
-          )}         
+          </div>          
+      
+          {this.state.Tambah && (<Komponentambah
+          klik={this.klik}/>)}        
+          {this.state.Kurang && <Komponenkurang klik={this.klik} />}                
           {this.state.Kali && <Komponenkali klik={this.klik}/>}
           {this.state.Bagi && <Komponenbagi klik={this.klik}/>}
+
+
   
           {/* <Komponenbagi klik={this.klik}/> */}
         </div>
@@ -103,5 +85,16 @@ klik = tombol => {
     )
   }
 
+  // <div className="buttonpilih">
+  // <button onClick={() => this.setState({op: 'tbh'})}>TBH</button>           
+  // <button onClick={() => this.setState({op: 'krg'})}>KRG</button>
+  // <button onClick={() => this.setState({Kali: !this.state.Kali})}>KALI</button>
+  // <button onClick={() => this.setState({Bagi: !this.state.Bagi})}>BAGI</button>
+  // </div>          
 
+  // {this.state.op=='tbh' && (<Komponentambah
+  // klik={this.klik}/>)}        
+  // {this.state.op=='krg' && <Komponenkurang klik={this.klik} />}                
+  // {this.state.Kali && <Komponenkali klik={this.klik}/>}
+  // {this.state.Bagi && <Komponenbagi klik={this.klik}/>}
 }
