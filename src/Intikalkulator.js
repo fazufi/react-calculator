@@ -24,15 +24,16 @@ klik = tombol => {
   };
 
   kodehitung = () => {
-    let cekhasil = ""
-    if(this.state.hasil){
-        cekhasil = this.state.hasil.replace("","")}
+    var cekhasil = ""
+    if(this.state.hasil.includes("--")){
+        cekhasil = this.state.hasil.replace("--","+")}
       
     else {
         cekhasil = this.state.hasil}
-            console.log(this.state.hasil.replace("",""))
+            
     try {
-        this.setState({                
+        this.setState({   
+          // eslint-disable-next-line             
             hasil: (eval(cekhasil) || "" ) + ""
         })
     }
@@ -45,6 +46,7 @@ klik = tombol => {
   render() {
     return(
       <div>
+
         <div className="fullkalkulator">
           <h1>SELECT ONE:</h1>
           <div className="buttonpilih">
@@ -52,13 +54,14 @@ klik = tombol => {
             <button onClick={() => this.setState({op: 'min'})}>-</button>
             <button onClick={() => this.setState({op: 'kali'})}>X</button>
             <button onClick={() => this.setState({op: 'bagi'})}>:</button>
-            </div>  
+          </div>  
+
           <ResultComponent hasil={this.state.hasil}/>                  
 
-          {this.state.op=='plus' && <Komponentambah klik={this.klik}/>}        
-          {this.state.op=='min' && <Komponenkurang klik={this.klik} />}                
-          {this.state.op=='kali' && <Komponenkali klik={this.klik}/>}
-          {this.state.op=='bagi' && <Komponenbagi klik={this.klik}/>}         
+          {this.state.op ==='plus' && <Komponentambah klik={this.klik}/>}        
+          {this.state.op ==='min' && <Komponenkurang klik={this.klik} />}                
+          {this.state.op ==='kali' && <Komponenkali klik={this.klik}/>}
+          {this.state.op ==='bagi' && <Komponenbagi klik={this.klik}/>}         
         </div>
       </div>
     )
