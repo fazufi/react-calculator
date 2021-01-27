@@ -37,7 +37,7 @@ klik = tombol => {
             hasil: (eval(cekhasil) || "" ) + ""
         })
     }
-     catch (konconetry) { alert("YOUR TASK IS UNCORRECT OR JUST NOT PERFECT    -_-")
+     catch (konconetry) { alert("ngantuk ta!!!!!!")
         this.setState({ cekhasil })
     }
 };
