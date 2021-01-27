@@ -4,8 +4,9 @@ export default class Komponentambah extends Component {
 
   render() {
     return (
-      <div classnmame= "Komponentambah">
-      <h4>KOMPONEN TAMBAH</h4>
+      <div>
+      <h4>KOMPONEN TAMBAH:</h4> <br/>
+
       <button name="+" onClick={parameter => this.props.klik(parameter.target.name)}>+</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>
       <button name="1" onClick={parameter => this.props.klik(parameter.target.name)}>1</button>

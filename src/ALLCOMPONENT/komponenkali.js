@@ -4,7 +4,7 @@ export default class Komponenkali extends Component {
 
   render() {
     return (
-      <div classnmame= "Komponenkali">
+      <div>
       <h4>KOMPONEN KALI:</h4>
       <button name="*" onClick={parameter => this.props.klik(parameter.target.name)}>x</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>

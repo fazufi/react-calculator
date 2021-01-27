@@ -4,7 +4,7 @@ export default class Komponenkurang extends Component {
 
   render() {
     return (
-      <div classnmame= "Komponenkurang">
+      <div>
       <h4>KOMPONEN KURANG:</h4><br/>
 
       <button name="-" onClick={parameter => this.props.klik(parameter.target.name)}>-</button>

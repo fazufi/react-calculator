@@ -4,8 +4,8 @@ export default class Komponenbagi extends Component {
 
   render() {
     return (
-      <div classnmame= "komponenbagi">
-      <h4>KOMPONEN BAGI</h4> <br/>
+      <div>
+      <h4>KOMPONEN BAGI:</h4> <br/>
       
       <button name="/" onClick={parameter => this.props.klik(parameter.target.name)}>:</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>

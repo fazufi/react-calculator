@@ -25,8 +25,8 @@ klik = tombol => {
 
   kodehitung = () => {
     var cekhasil = ""
-    if(this.state.hasil.includes("--")){
-        cekhasil = this.state.hasil.replace("--","+")}
+    if(this.state.hasil){
+        cekhasil = this.state.hasil.replace("","+")}
       
     else {
         cekhasil = this.state.hasil}
