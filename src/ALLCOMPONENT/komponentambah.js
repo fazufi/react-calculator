@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 
-export default class Komponenbagi extends Component {
+export default class Komponentambah extends Component {  
 
   render() {
     return (
-      <div classnmame= "komponenbagi">
-      
-      <button name="/" onClick={parameter => this.props.klik(parameter.target.name)}>:</button>
+      <div classnmame= "Komponentambah">
+      <h4>KOMPONEN TAMBAH</h4>
+      <button name="+" onClick={parameter => this.props.klik(parameter.target.name)}>+</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>
       <button name="1" onClick={parameter => this.props.klik(parameter.target.name)}>1</button>
       <button name="2" onClick={parameter => this.props.klik(parameter.target.name)}>2</button><br/>

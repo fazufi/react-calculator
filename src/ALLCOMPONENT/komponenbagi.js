@@ -1,12 +1,13 @@
 import React, {Component} from "react";
 
-export default class Komponenkali extends Component {
+export default class Komponenbagi extends Component {
 
   render() {
     return (
-      <div classnmame= "Komponenkali">
+      <div classnmame= "komponenbagi">
+      <h4>KOMPONEN BAGI</h4> <br/>
       
-      <button name="*" onClick={parameter => this.props.klik(parameter.target.name)}>x</button>
+      <button name="/" onClick={parameter => this.props.klik(parameter.target.name)}>:</button>
       <button name="0" onClick={parameter => this.props.klik(parameter.target.name)}>0</button>
       <button name="1" onClick={parameter => this.props.klik(parameter.target.name)}>1</button>
       <button name="2" onClick={parameter => this.props.klik(parameter.target.name)}>2</button><br/>
