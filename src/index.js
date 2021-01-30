@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+import App from './AppEdit';
 import reportWebVitals from './reportWebVitals';
 // import Komponenbagi from './kumpulankomponen/komponenbagi';
 import Intikalkulator from './Intikalkulator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Intikalkulator />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
